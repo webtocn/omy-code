@@ -65,16 +65,7 @@ jobs:
 
           echo ""
           echo "安装软件包"
-          sudo apt-get update && sudo apt-get install -y ca-certificates openssh-client rsync  skopeo curl gh
-
-
-          echo ""
-          echo "安装 helm"
-          which helm
-          if [ $? -ne 0 ];then
-            curl https://raw.githubusercontent.com/helm/helm/refs/heads/main/scripts/get-helm-3 | bash
-          fi
-          helm version
+          sudo apt-get update && sudo apt-get install -y ca-certificates openssh-client rsync curl gh
 
           echo ""
           echo "下载cs-executor文件, 基于wget"
