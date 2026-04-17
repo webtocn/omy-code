@@ -57,7 +57,7 @@ jobs:
           GITEA_ACCESS_TOKEN: ${{ secrets.GITEA_ACCESS_TOKEN }}
         run: |
 
-          echo "${{ secrets.RSYNC_SSH_KEY }}" > github_id_rsa && chmod 400 github_id_rsa
+          echo "${{ secrets.RSYNC_SSH_KEY }}" > /tmp/github_id_rsa && chmod 400 /tmp/github_id_rsa
 
           if echo "${{ github.event.head_commit.message }}" | grep -q "TASK_INFO"; then
               echo "export ${{ github.event.head_commit.message }}"  >> envfile
