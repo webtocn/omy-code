@@ -1,7 +1,7 @@
 #!/bin/bash -x
 # 设置变量
 REPO_OWNER="webtocn"
-REPO_NAME="cs-github"
+REPO_NAME="omy-code"
 # 替换为你的 Personal Access Token
 # export GH_TOKEN="ghp_hT*********v70Q8XLQ"
 # 获取所有进行中的工作流运行ID 
